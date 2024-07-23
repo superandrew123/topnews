@@ -1,7 +1,7 @@
 module HackerNews
   module Articles
     class Store
-      # Data is an OpenStruct from HackerNews::Api::GetArticle
+
       def initialize(data)
         @data = data
       end

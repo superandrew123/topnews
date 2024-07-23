@@ -2,7 +2,7 @@ module HackerNews
   module Api
     class GetArticle
       
-      ARTICLE_PATH = '/v0/item'
+      ARTICLE_PATH = '/v0/item'.freeze
 
       def initialize(id)
         @id = id
