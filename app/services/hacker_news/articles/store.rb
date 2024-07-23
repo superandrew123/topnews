@@ -33,18 +33,18 @@ module HackerNews
       end
 
       def existing_article?
-        @existing_article = Article.find_by(foreign_id: data_attributes[:foreign_id])
+        @existing_article = Article.find_by(external_id: data_attributes[:external_id])
         @existing_article.present?
       end
 
       def update_article
-        @existing_article.update!(data_attributes.except(:foreign_id))
+        @existing_article.update!(data_attributes.except(:external_id))
       end
 
       def data_attributes
         # Could be extracted into a serializer
         {
-          foreign_id: @data['id'],
+          external_id: @data['id'],
           time: Time.at(@data['time'].to_i),
           by: @data['by'],
           url: @data['url'],

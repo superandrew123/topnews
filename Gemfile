@@ -8,6 +8,7 @@ gem 'coffee-rails'
 gem 'devise'
 gem 'faraday'
 gem 'jbuilder'
+gem 'kaminari'
 gem 'listen', group: :development
 gem 'pg'
 gem 'pry-rails'
