@@ -49,7 +49,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_23_024257) do
   create_table "users_articles", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "article_id", null: false
-    t.boolean "liked", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
